@@ -11,7 +11,7 @@ license:             BSD-3-Clause
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/winapi-test#readme>
+description:         Please see the README on GitHub at https://github.com/blend-tea/WinAPITemplate-hs#readme
 
 dependencies:
 - base >= 4.7 && < 5
@@ -35,9 +35,9 @@ executables:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
-    # WINDOWS サブシステム: 起動時にコンソールを割り当てない（GUI 向け PE）
+    # Windows subsystem: no console at startup (GUI PE).
     - -optl=-Wl,--subsystem,windows
-    # サイズ: セクション分割、GC、strip。デバッグ情報は出さない（バイナリにソースパスが残りにくい）
+    # Size: split sections, GC, strip; omit debug info (fewer source paths in the binary).
     - -g0
     - -O2
     - -split-sections

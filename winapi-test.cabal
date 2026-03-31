@@ -6,7 +6,7 @@ cabal-version: 2.2
 
 name:           winapi-test
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/winapi-test#readme>
+description:    Please see the README on GitHub at https://github.com/blend-tea/WinAPITemplate-hs#readme
 license:        BSD-3-Clause
 license-file:   LICENSE
 build-type:     Simple

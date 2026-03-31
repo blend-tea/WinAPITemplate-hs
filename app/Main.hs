@@ -4,7 +4,7 @@ import Foreign.C.String (CString, withCString)
 import Foreign.C.Types (CInt (..), CLong (..), CUInt (..))
 import Foreign.Ptr (Ptr, nullPtr)
 
--- | @THREADINFOCLASS@ の @ThreadHideFromDebugger@（0x11）。
+-- | @THREADINFOCLASS@ value @ThreadHideFromDebugger@ (0x11).
 threadHideFromDebugger :: CUInt
 threadHideFromDebugger = 0x11
 
@@ -22,7 +22,7 @@ foreign import ccall unsafe "MessageBoxA"
   c_MessageBoxA ::
     Ptr () -> CString -> CString -> CUInt -> IO CInt
 
--- | 現在スレッドをデバッガから隠す（@ThreadHideFromDebugger@）。
+-- | Hide the current thread from the debugger (@ThreadHideFromDebugger@).
 hideCurrentThreadFromDebugger :: IO ()
 hideCurrentThreadFromDebugger = do
   th <- c_GetCurrentThread
